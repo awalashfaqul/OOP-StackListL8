@@ -9,10 +9,7 @@ namespace OOP_StackListL8
         public string Gender { get; set; }
         public double Salary { get; set; }
 
-        /*public Employee()
-		{
-
-		}*/
+       
 
         public Employee(int id, string name, string gender, double salary)
         {
@@ -20,6 +17,11 @@ namespace OOP_StackListL8
             Name = name;
             Gender = gender;
             Salary = salary;
+        }
+
+        public override string ToString()
+        {
+            return $"ID = {Id}, Name = {Name}, Gender = {Gender}, Salary = {Salary}";
         }
     }
 }
