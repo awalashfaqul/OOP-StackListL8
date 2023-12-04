@@ -75,6 +75,43 @@ class Program
             Console.WriteLine($"{targetEmployee.Name} object does not exist in the stack");
         }
 
+
+
+        // Part-2: Creating List
+
+        // Part 2 - List
+        List<Employee> employeeList = new List<Employee>
+        {
+            employee1, employee2, employee3, employee4, employee5
+        };
+
+        // Checking if Employee2 object exists in the list
+        var containsEmployee2 = employeeList.Contains(employee2);
+        Console.WriteLine($"\nEmployee2 {(containsEmployee2 ? "exists" : "does not exist")} in the list");
+
+        // Finding and printing the first item in the list with Gender = "Male"
+        var firstMaleEmployee = employeeList.Find(e => e.Gender == "Male");
+        Console.WriteLine($"\nFirst male Employee in the list: Id: {firstMaleEmployee.Id}, Name: {firstMaleEmployee.Name}, Gender: {firstMaleEmployee.Gender}, Salary: {firstMaleEmployee.Salary}");
+
+        // Finding and printing all items in the list with Gender = "Male"
+        var maleEmployees = employeeList.FindAll(e => e.Gender == "Male");
+        Console.WriteLine("\nAll male Employees in the list: ");
+        foreach (var maleEmployee in maleEmployees)
+        {
+            Console.WriteLine($"Id: {maleEmployee.Id}, Name: {maleEmployee.Name}, Gender: {maleEmployee.Gender}, Salary: {maleEmployee.Salary}");
+        }
+
+        // Finding and printing the first item in the list with Gender = "Female"
+        var firstfemaleEmployee = employeeList.Find(e => e.Gender == "Female");
+        Console.WriteLine($"\nFirst female Employee in the list: Id: {firstfemaleEmployee.Id}, Name: {firstfemaleEmployee.Name}, Gender: {firstfemaleEmployee.Gender}, Salary: {firstfemaleEmployee.Salary}");
+
+        // Finding and printing all items in the list with Gender = "Female"
+        var femaleEmployees = employeeList.FindAll(e => e.Gender == "Female");
+        Console.WriteLine("\nAll Female Employees in the list: ");
+        foreach (var femaleEmployee in femaleEmployees)
+        {
+            Console.WriteLine($"Id: {femaleEmployee.Id}, Name: {femaleEmployee.Name}, Gender: {femaleEmployee.Gender}, Salary: {femaleEmployee.Salary}");
+        }
         Console.ReadLine();
     }
 }
